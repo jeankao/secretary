@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+        我的帳本：<BR>
+        <table>
+          <tr><td>時間</td><td>項目</td><td>功能</td></tr>
+{% for money in money_list %}          
+          <tr><td>({{money.time| date:"l"}}){{money.time}}</td></td><td><a href="money/{{money.id}}/update/">{{money.item}}--{{money.get_kind_display}}--{{money.price}}</a></td><td><a href="money/{{money.id}}/delete/">刪除</a></td></tr>
+{% endfor %}           
+       </table>
+         
+
+
+<h1></h1>
+
+
+<BR>
+
+{% endblock %}

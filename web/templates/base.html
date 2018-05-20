@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Template Name: Ostenien
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>我的隨身秘書</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/layout.css' %}">
+</head>
+<body>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row0">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo">
+      <h1>我的隨身秘書</h1>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<div class="wrapper row1">
+  {% if user.is_authenticated %}   
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+        <li><a href="/web/diary">日記</a></li>
+        <li><a href="/web/diary/add">寫日誌</a></li>
+        <li><a href="/web/money">帳本</a></li>           
+        <li><a href="/web/money/add">記帳</a></li> 
+        <li><a href="/accounts/logout">登出</a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+  {% endif %}  
+</div>
+    <!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="group">
+      <h3>
+     {% block content %}
+     {% endblock %}        
+      </h3>
+
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+
+    <!-- ################################################################################################ -->
+<div class="wrapper row6">
+  <div id="copyright" class="clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - All Rights Reserved - 網站開發：高慧君</p>
+    <p class="fl_right">Template by <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<script src="/static/js/jquery.min.js"></script> 
+<script src="/static/js/jquery.mobilemenu.js"></script>  
+</body>
+</html>
