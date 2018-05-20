@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import Diary, Month, Money
+from .models import Diary, Money
 
 admin.site.register(Diary)
-admin.site.register(Month)
 admin.site.register(Money)
 
 

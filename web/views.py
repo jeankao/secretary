@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
-from .models import Diary, Month, Money
+from .models import Diary, Money
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 class DiaryListView(LoginRequiredMixin, generic.ListView):

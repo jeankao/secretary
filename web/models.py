@@ -9,10 +9,6 @@ class Diary(models.Model):
         def __str__(self):
                 return self.memo
 
-# 月份
-class Month(models.Model):
-        date = models.IntegerField(default=0)
-
 # 帳目
 class Money(models.Model):
         CHOICES = (
